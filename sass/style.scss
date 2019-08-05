@@ -1,0 +1,16 @@
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+
+    .board {
+        display: flex;
+        align-self: center;
+        width: 90%;
+        min-height: 600px;
+        background: url('https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png');
+        border-radius: 5px;
+    }
+}
