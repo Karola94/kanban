@@ -6,11 +6,53 @@ body {
 
 
     .board {
+        position: relative;
         display: flex;
         align-self: center;
+        flex-direction: column;
         width: 90%;
-        min-height: 600px;
+        min-height: 800px;
         background: url('https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png');
         border-radius: 5px;
+        margin-bottom: 20px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            background: rgba( #ffffff, $alpha: 0.5);
+            min-height: 800px;
+            position: absolute;
+
+        }
+        .create-column {
+            max-width: 200px;
+            margin: 5px 0;
+            z-index: 1;
+            align-self: center;
+        }
+        .column-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;            
+            z-index: 1;
+            flex-wrap: wrap;
+        }        
+    }
+    .column {
+        margin: 30px;
+
+        .column-title {
+            border: 2px solid white;
+            background: #5c5c5c;
+            color: white;
+            padding: 5px;
+            border-radius: 5%;
+            min-width: 250px;
+            text-align: left;            
+        }
+        .column-card-list > li{
+            list-style-type: none;
+        }
     }
 }

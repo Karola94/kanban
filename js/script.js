@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
           group: 'kanban',
           sort: true
         });
+        return sortable;
       }
 
       document.querySelector('#board .create-column').addEventListener('click', function() {
@@ -110,3 +111,4 @@ document.addEventListener('DOMContentLoaded', function() {
         todoColumn.addCard(card1);
         doingColumn.addCard(card2);
 });
+

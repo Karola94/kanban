@@ -1,3 +1,61 @@
-body { text-align: center; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; }
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
 
-body .board { display: -ms-flexbox; display: flex; -ms-flex-item-align: center; align-self: center; width: 90%; min-height: 600px; background: url("https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png"); border-radius: 5px; }
+body .board {
+  position: relative;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  width: 90%;
+  min-height: 800px;
+  background: url("https://cdn.pixabay.com/photo/2018/12/25/11/10/deer-3894103_960_720.png");
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+body .board::after {
+  content: '';
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  min-height: 800px;
+  position: absolute;
+}
+
+body .board .create-column {
+  max-width: 200px;
+  margin: 5px 0;
+  z-index: 1;
+  align-self: center;
+}
+
+body .board .column-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+body .column {
+  margin: 30px;
+}
+
+body .column .column-title {
+  border: 2px solid white;
+  background: #5c5c5c;
+  color: white;
+  padding: 5px;
+  border-radius: 5%;
+  min-width: 250px;
+  text-align: left;
+}
+
+body .column .column-card-list > li {
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=style.css.map */
