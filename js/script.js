@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.name = name;
         this.element = generateTemplate('column-template', { name: this.name });
         //Delete column after click button
+
         this.element.querySelector('.column').addEventListener('click', function (event) {
             if (event.target.classList.contains('btn-delete')) {
               self.removeColumn();
@@ -73,13 +74,14 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Kanban Board',
         addColumn: function(column) {
           this.element.appendChild(column.element);
-          initSortable(column.id); //About this feature we will tell later
+          console.log(column.id);
+          initSortable(column.element); //About this feature we will tell later          
         },
         element: document.querySelector('#board .column-container')
       };
 
-      function initSortable(id) {
-        var el = document.getElementById(id);
+      function initSortable(el) {
+        // var el = document.getElementById(id);
         var sortable = Sortable.create(el, {
           group: 'kanban',
           sort: true

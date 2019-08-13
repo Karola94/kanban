@@ -54,7 +54,7 @@ body .column .column-title {
   text-align: left;
 }
 
-body .column .column-card-list > li {
+body .column .column-card-list {
   list-style-type: none;
 }
 

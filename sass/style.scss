@@ -51,8 +51,10 @@ body {
             min-width: 250px;
             text-align: left;            
         }
-        .column-card-list > li{
+        .column-card-list {
             list-style-type: none;
+            padding-left: 0;
+            height: 100px;
         }
     }
 }
