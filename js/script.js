@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
 
       function initSortable(el) {
-        // var el = document.getElementById(id);
+        //var el = document.getElementById(id);
         var sortable = Sortable.create(el, {
           group: 'kanban',
           sort: true
@@ -108,9 +108,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // CREATING CARDS
         var card1 = new Card('New task');
         var card2 = new Card('Create kanban boards');
+        var card3 = new Card('Done task');
 
         // ADDING CARDS TO COLUMNS
         todoColumn.addCard(card1);
         doingColumn.addCard(card2);
+        doneColumn.addCard(card3);
 });
 

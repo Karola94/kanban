@@ -20,7 +20,7 @@ body .board::after {
   content: '';
   display: block;
   width: 100%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   min-height: 800px;
   position: absolute;
 }
@@ -41,21 +41,82 @@ body .board .column-container {
 }
 
 body .column {
-  margin: 30px;
+  margin: 10px 5px;
+  border: 2px solid white;
+  background: #9e9e9e;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-body .column .column-title {
+body .column .column-head {
+  display: flex;
+  flex-direction: row;
   border: 2px solid white;
-  background: #5c5c5c;
+  background: #9e9e9e;
   color: white;
   padding: 5px;
-  border-radius: 5%;
+  border-radius: 5px;
   min-width: 250px;
-  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+body .column .column-head .btn-danger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  padding: 0;
 }
 
 body .column .column-card-list {
   list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+body .column .column-card-list li .card {
+  min-height: 70px;
+}
+
+body .column .btn-warning {
+  max-height: 50px;
+  max-width: 70px;
+  font-size: 10px;
+  padding: 5px;
+  font-weight: 700;
+}
+
+body .card {
+  position: relative;
+  margin-top: 5px;
+}
+
+body .card .card-description {
+  text-align: left;
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+body .card .del {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: white;
+  right: 3px;
+  bottom: 3px;
+  padding: 0;
+}
+
+body .card .del:hover {
+  color: #666;
+  background-color: #f2f2f2;
 }
 
 /*# sourceMappingURL=style.css.map */
