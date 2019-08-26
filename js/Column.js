@@ -40,12 +40,23 @@ Column.prototype = {
   },
   removeColumn: function() {
     var self = this;
-    fetch(baseUrl + '/column/' + self.id, {method: 'DELETE', headers: myHeaders })
+    fetch(baseUrl + '/column/' + self.id, { method: 'DELETE', headers: myHeaders })
         .then(function(resp) {
             return resp.json();
         })
         .then(function(resp) {
             self.element.parentNode.removeChild(self.element);
         });    
+  },
+  //Added
+  actualColumn: function() {
+    var self = this;
+    fetch(baseUrl + '/column/' + self.id, { method: 'PUT', headers: myHeaders })
+      .then(function(resp) {
+        return resp.json();
+      })
+      .then(function(resp) {
+
+      });
   }
 };
