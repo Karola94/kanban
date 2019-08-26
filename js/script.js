@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addColumn: function(column) {
           this.element.appendChild(column.element);
           console.log(column.id);
-          initSortable(column.element); //About this feature we will tell later          
+          initSortable(column.element.querySelector('ul')); //About this feature we will tell later          
         },
         element: document.querySelector('#board .column-container')
       };
