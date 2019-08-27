@@ -8,30 +8,30 @@
 </head>
 <body>
     <h1>Kanban board</h1>
-	<div id="board" class="board">    
+	<div id="board" class="board">
     <button class="create-column btn btn-success">Add a column</button>
     <div class="column-container"></div>
     </div>
-    
+
 
     <script id="column-template" type="x-tmpl-mustache">
         <div class="column">
             <div class="column-head">
                 <h2 class="column-title">{{ name }}</h2>
                 <button class="btn-delete btn btn-danger">X</button>
-            </div>           
-            <ul id="{{ id }}" class="column-card-list"></ul>            
+            </div>
+            <ul id="{{ id }}" class="column-card-list"></ul>
             <button class="add-card btn btn-warning">Add a card</button>
         </div>
     </script>
     <script id="card-template" type="x-tmpl-mustache">
         <div class="card">
-          <p class="card-description" contenteditable="true">{{ description }}</p>
+          <p class="card-description">{{ description }}</p>
           <button class="btn-delete del">x</button>
         </div
       </script>
 
-  
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

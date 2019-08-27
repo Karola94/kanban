@@ -1,5 +1,5 @@
 
-var baseUrl = 'https://cors-anywhere.herokuapp.com/https://kodilla.com/pl/bootcamp-api';
+var baseUrl = 'http://127.0.0.1:3000/https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
     'X-Client-Id': '4191',
     'X-Auth-Token': '14dd3f89adf48badf8e81f0e073c5c8f'
@@ -17,7 +17,7 @@ fetch(baseUrl + '/board', { headers: myHeaders })
 function setupColumns(columns) {
     columns.forEach(function(column) {
         var col = new Column(column.id, column.name);
-        board.addColumn(col);        
+        board.addColumn(col);
         setupCards(col, column.cards);
     });
 }
@@ -44,10 +44,10 @@ function setupCards(col, cards) {
 function generateTemplate(name, data, basicElement) {
   	var template = document.getElementById(name).innerHTML;
   	var element = document.createElement(basicElement || 'div');
-  
+
   	Mustache.parse(template);
   	element.innerHTML = Mustache.render(template, data);
-  
+
   	return element;
 }
 
